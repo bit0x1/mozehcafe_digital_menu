@@ -317,6 +317,7 @@ $('q').addEventListener('input',e=>{const v=e.target.value.trim().toLowerCase();
 
 // ===== Google Sheet / Excel link =====
 // 1) Upload menu-data.xlsx to Google Sheets  2) File > Share > Publish to web > choose the "menu" tab + CSV  3) paste the link below.const SHEET_CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vSO11P7ViuJEUiE6ysAJV8MRdE67ZF1cylqV4ByFjTwtyHTmrg5huOwmINHB820S9bBTLWPoRHi5-Oh/pub?gid=930174820&single=true&output=csv';
+ const SHEET_CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vSO11P7ViuJEUiE6ysAJV8MRdE67ZF1cylqV4ByFjTwtyHTmrg5huOwmINHB820S9bBTLWPoRHi5-Oh/pub?gid=930174820&single=true&output=csv';
 function parseCSV(t){const R=[];let r=[],c='',q=false;t=t.replace(/^\uFEFF/,'');
   for(let i=0;i<t.length;i++){const ch=t[i];
     if(q){if(ch==='"'){if(t[i+1]==='"'){c+='"';i++}else q=false}else c+=ch}
